@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Timestamp Saver",
+  "version": "1.0",
+  "description": "Save YouTube video timestamps by shift-clicking on the timeline, with thumbnails, metadata, and enhanced description management.",
+  "permissions": [
+    "storage",
+    "tabs",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/watch*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
